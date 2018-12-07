@@ -8,7 +8,7 @@
 
 //*What is the difference between a TypeError and ReferenceError?
 
-//a type arror is thrown when trying to access undefined properties of an object or invoking something that is not a function; a reference error is thrown when we try to access a variable that doesn't exist in the current scope.
+//a type error is thrown when trying to access undefined properties of an object or invoking something that is not a function; a reference error is thrown when we try to access a variable that doesn't exist in the current scope.
 
 //*How do you create a snippet in the Chrome dev tools?
 
@@ -73,13 +73,13 @@ for(var i=0; i < 5; i++){
     console.log(i);
 }   
 
-//2
-function addIfEven(num){
+//2 
+/* function addIfEven(num){
     if(num % 2 = 0){
         return num + 5;
     }
     return num;
-}
+} */
 //the code uses the assignment operator instead of the equality operator
 //FIXED
 function addIfEven(num){
@@ -90,11 +90,11 @@ function addIfEven(num){
 }
 
 //3
-function loopToFive(){
+/* function loopToFive(){
     for(var i=0, i < 5, i++){
         console.log(i);
     }
-}
+} */
 //the code uses commas in the loop statement instead of semicolons
 //FIXED
 function loopToFive(){
@@ -103,7 +103,8 @@ function loopToFive(){
     }
 }
 
-//4
+//4 
+/*
 function displayEvenNumbers(){
     var numbers = [1,2,3,4,5,6,7,8];
     var evenNumbers = [];
@@ -115,6 +116,7 @@ function displayEvenNumbers(){
     }
 }
 displayEvenNumbers(); // should return [2,4,6,8] 
+*/
 //there's an unexpected semicolon at the end of the loop final declaration and in the if statement the assignment operator is used instead of the equality one. The numbers inside the if statement is mnissing the index 'i' and the push method argument should be 'numbers[i]'. Finally, the return statement should be out of the for loop otherwise it's going to stop the execution of the function at it first iteration. There's an unespected semicolon after the if statement condition.
 //FIXED
 function displayEvenNumbers(){

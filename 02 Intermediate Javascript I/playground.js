@@ -1,11 +1,24 @@
-function displayEvenNumbers(){
-    var numbers = [1,2,3,4,5,6,7,8];
-    var evenNumbers = [];
-    for(var i = 0; i < numbers.length; i++){
-        if(numbers[i] % 2 == 0) {
-            evenNumbers.push(numbers[i]);
+var instructorData = {
+    name: "Elie",
+    additionalData: {
+        instructor: true,
+        favoriteHobbies: ["Playing Cello", "Tennis", "Coding"],
+        moreDetails: {
+            favoriteBasketballTeam: "New York Knicks",
+            numberOfSiblings: 3,
+            isYoungest: true,
+            hometown: {
+                city: "West Orange",
+                state: "NJ",
+            },
+            citiesLivedIn: ["Seattle", "Providence", "New York"]
         }
-    }        return evenNumbers;
+    }
+};
 
-}
-displayEvenNumbers();
+instructorData.name; // "Elie"
+instructorData.additionalData.instructor; // true
+instructorData.additionalData.favoriteHobbies[2]; // "Coding"
+instructorData.additionalData.moreDetails.favoriteBasketballTeam; // "New York Knicks"
+instructorData.additionalData.moreDetails.hometown.state; // "NJ"
+instructorData.additionalData.moreDetails.citiesLivedIn[1]; // "Providence"

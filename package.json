@@ -1,0 +1,22 @@
+{
+  "name": "rithm-school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcmbr/Rithm-School.git"
+  },
+  "author": "mrc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrcmbr/Rithm-School/issues"
+  },
+  "homepage": "https://github.com/mrcmbr/Rithm-School#readme",
+  "devDependencies": {
+    "jshint": "^2.9.6"
+  }
+}
