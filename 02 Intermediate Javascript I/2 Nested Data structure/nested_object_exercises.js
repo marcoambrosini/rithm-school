@@ -88,6 +88,6 @@ function addCountry() {
     nestedObject.data.continents.europe.countries.spain = {
         capital : 'Madrid',
         population : 46570000
-    }
+    };
 }
 addCountry();
