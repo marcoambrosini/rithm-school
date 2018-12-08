@@ -51,29 +51,27 @@ var nestedArr = [
     "Lorien"
 ];
 
-//the vowels count is declared outside the searchVowels function, otherwise it would be redeclared everytime the function called itself (it's recursive). I tried to declare it in the countVowels function before calling the searchvowels function but even if i declared it with the var keyword (the scope should be the entire function), the inner searchVowels function would not see it.
-var vowels = 0;
-function searchVowels(arr) {
-    //iterating through each element of the array (or nested arrays in the subsequent calls)
-    for (let i of arr) {
-        //checking if the element i of the array is a string or another array
-        if (typeof i === 'string') {
-            //looping through the elements of the string
-            for(let j of i) {
-                //checking if the current element of the string is a vocal or not
-                if (j === 'a' || j === 'e' || j === 'i' || j === 'o' || j === 'u' || j === 'A' || j === 'E' || j === 'I' || j === 'O' || j === 'U') {
-                    vowels++;
-                } 
-            }
-        //if the element i of the parent array is another array, the function calls itself and repeats everything on the  nested array (recursive)
-        } else searchVowels(i);
-    }
-}
+
 
 
 function countVowels (arr) {
-    //I tried to declare it in the here function before calling the searchVowels function but even if i declared it with the var keyword (the scope should be the entire function), the inner searchVowels function would not see it.
-    searchVowels (arr);
+    var vowels = 0;
+    (function searchVowels(arr) {
+        //iterating through each element of the array (or nested arrays in the subsequent calls)
+        for (let i of arr) {
+            //checking if the element i of the array is a string or another array
+            if (typeof i === 'string') {
+                //looping through the elements of the string
+                for(let j of i) {
+                    //checking if the current element of the string is a vocal or not
+                    if (j === 'a' || j === 'e' || j === 'i' || j === 'o' || j === 'u' || j === 'A' || j === 'E' || j === 'I' || j === 'O' || j === 'U') {
+                        vowels++;
+                    } 
+                }
+            //if the element i of the parent array is another array, the function calls itself and repeats everything on the  nested array (recursive)
+            } else searchVowels(i);
+        }
+    })(arr);
     return vowels;
 }
 
