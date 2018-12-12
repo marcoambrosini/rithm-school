@@ -11,6 +11,7 @@
 
 //   Why is it so important to store the result of setInterval and setTimeout in a variable?
 //   to be able to clear the timeout??? clearTimeout(whatevervariable in which setInterval and setTimeout is stored in)
+//To be able to use the clearInterval() method, you must use a variable when creating the interval method: myVar = setInterval("javascript function", milliseconds); Then you will be able to stop the execution by calling the clearInterval() method.
 
 //   What does asynchronous mean in the context of setTimeout and setInterval?
 // it means that not everything is executed at the beginning of the execution of the program, things ma be executed at a later point in time. 
