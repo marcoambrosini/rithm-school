@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button class="first_button">Click me first!</button>
+    <button class="second_button" >Click me second!</button>
+    <button class="third_button">Click me third!</button>
+</body>
+</html>
+
+<script>
+
+let buttons = document.getElementsByTagName('button'); //select all the elements with the HTML tag 'button'
+
+
+function alertBtn() {
+    alert('You\'ve just clicked a button.');
+} //naming the  function that you want to trigger when the event happens is essential if at some point we'd like to stop the eventlistener
+
+for (let i of buttons){ 
+    i.addEventListener('click', alertBtn);
+}// adds the event listener for each button, on click triggers the function alertBtn
+
+//for (let i of buttons){
+//    i.removeEventListener('click', alertBtn);
+//}// removes the event listener. This is what would not function without having named the alertBtn function (for example having used an unnamed arrow function directly as an argument of addEventListener before)
+
+
+</script>
