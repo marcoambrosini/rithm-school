@@ -49,7 +49,7 @@ window.onload = function () {
 			car1.style.marginLeft = margin1 + 'px';
 			car2.style.marginLeft = margin2 + 'px';
 			margin1 += 10;
-			margin2 += 8;
+			margin2 += 8;a
 			if (margin1 >= window.innerWidth - 50) {
 				clearInterval(timerId);
 				alert('1 wins the race!');
