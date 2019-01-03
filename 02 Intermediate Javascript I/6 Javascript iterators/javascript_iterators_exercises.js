@@ -81,9 +81,9 @@ function printEmails() {
 
 printHobbies = function() {
   users.forEach(x => console.log(x.hobbies));
-}
+};
 
-printHobbies();
+//printHobbies();
 // "Fishing",
 // "Sailing",
 // "Hiking",
@@ -102,6 +102,10 @@ printHobbies();
 
 //    Write a function called findHometownByState which returns the first user which has a hometown of the state that is passed in
 
+function findHometownByState(state) {
+  return users.find( x => x.hometown.state === state);
+}
+
 //findHometownByState('CA');
 /*/
 {
@@ -119,8 +123,13 @@ printHobbies();
 /*/
 
 //    Write a function called allLanguages which returns an array of all of the unique values
+function allLanguages() {
+  users.reduce((a,b) => {
+    a.favoriteLanguages.concat(b.favoriteLanguages);
+  });
+}
 
-//allLanguages();
+allLanguages();
 // ["Perl", "Scala", "C++","Haskell", "PHP","JavaScript","Ruby", "Python", "Go","C#", "F#", "Swift"]
 
 //    Write a function called hasFavoriteEditor which returns a boolean if any of the users have the editor passed in

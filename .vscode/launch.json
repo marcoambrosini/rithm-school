@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "chrome",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "C:\\Users\\mrc\\Desktop\\Rithm School\\02 Intermediate Javascript I\\6 Javascript iterators\\javascript_iterators_exercises.js",
-            "protocol": "auto"
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
